@@ -6,7 +6,7 @@ var companies = require('../companies.json');
 
 module.exports = {
 
-    // returns rss feed based on symbols in array
+    // returns rss feed based on user's symbols in array
     getFeed: function getFeed(callback) {
 
         let rssFeed;
@@ -35,7 +35,7 @@ module.exports = {
                 feed = JSON.stringify(result);
                 feed = JSON.parse(feed);
                 rssFeed = feed.rss.channel[0].item;
-                
+
                /* rssFeed.forEach(item => {
                     
                     console.log(item.title[0]);
@@ -48,19 +48,13 @@ module.exports = {
 
                 */
 
-                callback(null, rssFeed);
-
-                
-            });
-           
-        })
-
-       
-      
-        
+                callback(null, rssFeed);                
+            }); 
+        })      
     }
 }
 
+// need to get rid of special xml characters, this method doe not work
 function escapeXml(unsafe) {
     return unsafe.replace(/[<>&'"]/g, function (c) {
         switch (c) {

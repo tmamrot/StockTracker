@@ -23,7 +23,7 @@ module.exports = {
 
             let json = JSON.parse(body);
 
-            // remember companies is a the array of symbols in companies.json, soon 
+            // companies is an array of symbols in companies.json, soon 
             // this array will need to be pulled from a db
             companies.forEach(symbol => {
                 array.push({
@@ -40,14 +40,10 @@ module.exports = {
 
                 console.log('\n');
                 */
-
-
             });
             
             callback(null, array);
-        });
-
-       
+        });     
     },
 
     // Gets all listed stocks from API 
@@ -72,8 +68,5 @@ module.exports = {
     }
 }
 
-function formatArray(){
-
-}
 
 
