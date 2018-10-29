@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.2",
     "express": "^4.16.3",
+    "html-entities": "^1.2.1",
     "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "xml2js": "^0.4.19",
     "xml2json": "^0.11.2"
   }
