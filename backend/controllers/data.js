@@ -16,11 +16,14 @@ router.get("/userStock", function (req, res) {
 
     var options = {
         uri: url,
-        json: true // Automatically parses the JSON string in the response
+        json: true 
     };
 
     rp(options)
         .then(function (repos) {
+            // this is weird because we loop based on the number of user's symbols
+            // so there could be more in the array variable but we only care about what we pull from
+            // the db
             companies.forEach(symbol => {
                 array.push({
                     symbol: repos[symbol].quote.symbol,
@@ -42,12 +45,11 @@ router.get("/userStock", function (req, res) {
 router.get('/allStocks', function (req, res) {
 
     let suffix = '/ref-data/symbols';
-
     let url = prefix + suffix
 
     let options = {
         uri: url,
-        json: true // Automatically parses the JSON string in the response
+        json: true 
     };
 
     rp(options)
