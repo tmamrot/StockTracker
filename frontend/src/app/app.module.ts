@@ -12,6 +12,7 @@ import { RssComponent } from './rss/rss.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './card/nav/nav.component';
 import { GraphComponent } from './graph/graph.component';
+import { GraphService } from './graph/graph.service';
 
 
 
@@ -32,7 +33,10 @@ import { GraphComponent } from './graph/graph.component';
     MatDialogModule,
     MatCardModule
   ],
-  providers: [StockService],
+  providers: [
+    StockService,
+    GraphService
+],
   bootstrap: [AppComponent],
   entryComponents: [DialogComponent]
 })
