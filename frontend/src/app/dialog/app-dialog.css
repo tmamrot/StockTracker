@@ -1,0 +1,51 @@
+.dialog{
+    top: 30%;
+    left: 50%;
+    width: 40%;
+    height: 50%;
+    
+    
+}
+
+.mat-dialog-actions{
+    display: block;
+}
+
+
+input{
+    margin-right: 3px;
+
+}
+
+select{
+    float: bottom;
+    max-height: 20px;
+    overflow: auto;
+}
+
+ul{
+    list-style-type: none;
+    height: 100px;
+    width: auto;
+    overflow: auto;
+    
+    
+}
+
+li{
+    
+    display: block;
+    border-width: thin;
+    list-style-position:inside;
+    border: 1px solid black;
+    
+}
+
+li a {
+    display: block;
+}
+
+ul li :hover {
+    background: green;
+}
+

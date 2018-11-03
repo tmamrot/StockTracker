@@ -1,0 +1,15 @@
+<div class="dialog">
+  <h2 mat-dialog-title>Find Stock Dude</h2>
+  <mat-dialog-content>Enter Ticker</mat-dialog-content>
+  <mat-dialog-actions>
+        <input type="text" placeholder="Enter Ticker" (keyup)="OnKey($event)">
+        <label>Click Stock to Add to Watch List</label>
+      <ul  class=cardContainer>
+        <li *ngFor="let stock of stocks"  (click)="add(stock.symbol)" class=cardHeader>
+          <a>Ticker: {{stock.symbol}}</a>
+          <a>Company: {{stock.name}}</a>
+        </li>
+      </ul>
+  </mat-dialog-actions>
+</div>
+ 

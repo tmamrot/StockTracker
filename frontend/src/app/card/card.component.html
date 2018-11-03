@@ -1,0 +1,15 @@
+<div class=parent>
+        <ul class=navBar>
+            <li><a>Search Stocks You Are Watching</a></li>
+            <li><input type="text" placeholder="Case Sensitive" (keyup)="Filter($event)"></li>
+            <li><button id=addButton mat-raised-button   (click)="openDialog()">Add Stock To Watch List</button></li>
+        </ul>        
+      <div *ngFor="let stock of stocks" class=cardContainer>
+          <mat-card>
+             <h2 class=cardHeader> <mat-card-title>{{stock.name}}</mat-card-title></h2>
+              <p class=cardSymbol></p><mat-card-subtitle>Symbol: {{stock.symbol}}</mat-card-subtitle>
+              <p classs=price><mat-card-content>Open: ${{stock.open}}</mat-card-content></p>
+              <p classs=price><mat-card-content>Close: ${{stock.close}}</mat-card-content></p>
+          </mat-card>
+    </div>
+</div>
