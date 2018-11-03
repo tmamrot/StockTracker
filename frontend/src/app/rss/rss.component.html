@@ -1,0 +1,7 @@
+<div class="top"> 
+        <mat-card *ngFor="let event of events">
+           <h2 class=cardHeader> <mat-card-title><a href="{{event.link}}">{{event.title}}</a></mat-card-title></h2>
+            <p class=cardSymbol></p><mat-card-subtitle>{{event.description}}</mat-card-subtitle>
+        </mat-card>
+</div>
+

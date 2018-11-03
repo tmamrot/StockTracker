@@ -1,0 +1,13 @@
+.top{
+    display: block;
+    height: 100%;
+    width: 25%;
+    float: left;
+    position: absolute;
+    overflow: auto;   
+}
+
+label{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 25pt;
+}
