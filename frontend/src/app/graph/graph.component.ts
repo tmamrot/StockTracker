@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GraphService } from './graph.service';
 
 @Component({
   selector: 'app-graph',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphComponent implements OnInit {
 
-  constructor() { }
+  constructor(private graphs: GraphService) { }
 
   ngOnInit() {
   }
 
+  GetGraphData() {
+    this.graphs.GetHistory('alrm', '1y');
+  }
 }

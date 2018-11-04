@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './card/nav/nav.component';
 import { GraphComponent } from './graph/graph.component';
 import { GraphService } from './graph/graph.service';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 
@@ -31,11 +32,12 @@ import { GraphService } from './graph/graph.service';
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    AppRoutingModule
   ],
   providers: [
     StockService,
-    GraphService
+    GraphService,
 ],
   bootstrap: [AppComponent],
   entryComponents: [DialogComponent]
